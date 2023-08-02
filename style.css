@@ -1,0 +1,12 @@
+:root{
+    --almost-white: hsl(0, 0%, 98%);
+    --almost-white: hsl(0, 0%, 41%);
+    --almost-white: hsl(0, 0%, 8%);
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Epilogue', sans-serif;
+}
