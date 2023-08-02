@@ -10,3 +10,118 @@
 body{
     font-family: 'Epilogue', sans-serif;
 }
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden; /*Para que se esconda*/
+    max-width: 1200px;
+}
+.nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__hamburger{
+    width: 30px;
+    height: 50%;
+    background-image: url(images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    /*Esto es para eldiseño de la X */
+    z-index: 100; /*Para que aparezca sobre el menu blanco*/
+    transition: background-image .3s; 
+}
+/*Esta clase me lo invente desde aqui para utilizarla en JS sera como para reemplazar otra*/
+.nav__hamburguer--open{
+    background-image: url(images/icon-close-menu.svg);
+}
+.nav__overlay{
+    background-color: #000000a7;
+    position: fixed; /*Se saca del flujo de flexbox para posicionarlo en base con todo el navegador usando*/
+    inset: 0;
+
+    /*Esto es para que se esconda el menu completo, es decir se desactiva el evento del Mouse.
+    Tambien se crea una clase opuesta la cual se llama "nav__overlay--show"*/
+    opacity: 0;
+    pointer-events: none; /*desactivar evento*/
+    /* transition: .3s opacity; */
+}
+.nav__overlay--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.nav__menu{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    right: 0;
+    width: 65%;
+    max-width: 400px;
+    padding: 0;
+    list-style: none; /*Esto es para quitarle el estilo  de lista que tiene normalmente*/
+    overflow: auto;
+    padding: 70px 0;
+}
+.nav__item{
+    width: 80%;
+    margin: 0 auto;
+    color: var(--almost-black);
+    cursor: pointer;
+    padding: 20px 0;
+}
+/*uso de la seudoclase "has" y decirle que todos los elemtnos que tenga com hijo un elemnto con la clase parent tengan*/
+.nav__item:has(.nav__parent){
+    padding: 0;
+} 
+/*Este es el submenu*/
+.nav__inner{
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 1.5em;
+    overflow: hidden; /*Todo  lo que salga de este contenedor desaparezca y tambien un heigth*/
+    height: 0;
+    transition: height .4s;
+     /*Duracion de la trsnasicion*/
+}
+/*es el  span que tiene los elementos que poseen un submenu*/
+.nav__parent{
+    display: grid;
+    align-items: center; /*centrar Horizontal*/
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    gap: 1.3em;
+    padding: 20px 0;
+}
+.nav__link{
+    text-decoration: none;
+    color: var(--almost-black);
+}
+.nav__login{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.nav__login--border{
+    border: 1px solid gray;
+    border-radius: 1em;
+    margin-top: 20px;
+}
+.nav__sign{
+    display: inline-block; /*Investigar*/
+    color: gray;
+    padding: .7em 0;
+    text-decoration: none;
+}
+
