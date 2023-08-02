@@ -125,3 +125,73 @@ body{
     text-decoration: none;
 }
 
+
+/*Part Big of the screem*/
+.main__img{
+    width: 100%;   
+}
+.main__grid{
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-areas: 
+    "img img img"
+    ".   text .";
+}
+.main__article{
+    padding: 56px 0;
+    text-align: center;
+    grid-area: text;
+}
+.main__title{
+    font-size: 2rem;
+
+}
+
+
+
+.main__paragraph{
+    line-height: 1.5;
+    margin: 1.5em 0;
+}
+
+
+.main__cta{
+    background-color: black ;
+    color: #fff;
+    display: inline-block;
+    padding: .8em 1.5em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.main__cta:hover{
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+}
+
+
+.main__picture{
+    grid-area: img;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.main__brands{
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(30px, 100px);
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 80px;
+}
+.main__brand{
+    width: 100%;
+}
+
+
+
+
+
