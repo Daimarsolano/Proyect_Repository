@@ -57,3 +57,14 @@ function closeDropdown(desaparecer){
     }
 }
 
+/*Esta funcion pasa cuando la pantalla incrementa, y esconde los submenu, de cada elemento*/
+window.addEventListener('resize', ()=>{
+    closeDropdown(desaparecer);
+
+    if(window.innerWidth > 768){
+        const navInners = document.querySelectorAll('.nav__inner');
+
+       
+    }
+})
+
