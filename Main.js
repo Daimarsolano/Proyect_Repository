@@ -5,7 +5,7 @@ const Icono = document.querySelector('.nav__hamburger');
 const cerrar = document.querySelector('.nav__overlay');
 
 /*Esta variable es funcion de los elementos en desktop */
-const desaparecer = cerrar; //para esconder los menu.
+const desaparecer = cerrar; //para esconder los menu. 
 
 /*Guardar.
 Cada vez que le de click cambia el icono*/
