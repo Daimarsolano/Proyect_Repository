@@ -193,5 +193,114 @@ body{
 
 
 
+/*Para que la pantalla se adapte igualmente a desktop*/
+@media (min-width:768px){
+    .nav{
+        gap: 2em;
+        overflow: visible;
+        padding: 50px 0 0;
+    }
+    .nav__hamburger{
+        display: none;
+    }
+    /*Esto es para desactivar todas las funciones como el fondo oscuro*/
+    .nav__overlay{
+        position: unset; 
+        background-color: transparent;
+        opacity: 1;
+        pointer-events: unset;
+        flex: 1;
+    }
+    .nav__menu{
+        position: unset;
+        width: 100%;
+        max-width: unset;
+        background-color: unset;
+        padding: 0;
+        overflow: unset;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    .nav__item{
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    /*Aqui creamos y hacemos que se desaparezca los menu de los elementos*/
+    .nav__inner{
+        position: absolute;
+        left: 0;
+        padding: 0;
+        width: max-content;
+        height: auto;
+
+        padding: 2em;
+        background-color: #fff;
+        z-index: 100;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+        opacity: 0;
+        pointer-events: none;
+    }
+    .transtion_opacity{
+           transition: .3s opacity;
+    }
+    /*Creamos otra clase para poder hacer que con un click aparezca otra vez los menu
+    usando el else en JS*/
+    .nav__inner--show{
+        opacity: 1;
+        pointer-events: unset; /*Deshabilita el click*/
+    }
+    .nav__login{
+        width: max-content;
+        margin: 0;
+        margin-left: auto;
+    }
+    .nav__login--border{
+        margin: 0;
+        padding: 0 1.5em;
+    }
+    .main__grid{
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 90%;
+
+        gap: 2em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "text img";
+        padding: 70px 0;
+    }
+    .main__picture{
+        max-height: 500px;
+    }
+    .main__img{
+        height: 100%;
+    }
+    .main__article{
+        text-align: left;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .main__brands{
+        margin: auto 0 0 0;
+    }
+    .main__texts{
+        margin: auto;
+    }
+    .main__title{
+        font-size: 3.5rem;
+    }
+    .main__paragraph{
+        margin: 2em 0;
+    }
+}
+
+
+
+
 
 
